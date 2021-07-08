@@ -5,7 +5,7 @@ body {
     .dex-wrapper{
         margin:auto;
         max-width:400px;
-        background: #ff4747;
+        background: #ff3333;
         /*background:red;*/
     }
         .dex-header{
@@ -19,6 +19,9 @@ body {
                 border-radius:40px;
                 margin: 20px;
                 background:skyblue;
+            }
+            .addthis_inline_share_toolbox{
+                margin-top: 20px;
             }
             .sign-header{
                 display:inline-block;
@@ -117,12 +120,12 @@ body {
                                 }
 
         .dex-button{
-            position:relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
             height:160px;
         }
             .button-cross{
-                position:absolute;
-                right:20px;
-                width:140px;
-
+                margin: 20px;
+                width: 120px;
             }
