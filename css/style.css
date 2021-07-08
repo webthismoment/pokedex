@@ -129,3 +129,7 @@ body {
                 margin: 20px;
                 width: 120px;
             }
+    .section-ads{
+        width:400px;
+        max-height:200px;
+    }
