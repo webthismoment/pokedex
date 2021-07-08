@@ -130,6 +130,6 @@ body {
                 width: 120px;
             }
     .section-ads{
-        width:400px;
+        max-width:400px;
         max-height:200px;
     }
