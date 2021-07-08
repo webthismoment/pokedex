@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <title>AI Pokedex</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,12 @@
     <meta property="og:description" content="pokedex(1gen) predicting what pokemon is by using google teachable machine">
     <meta property="og:site_name" content="AI Pokedex">
     <meta property="og:locale" content="ko_KR">
-    <title>AI Pokedex</title>
+    <script data-ad-client="ca-pub-8392902626736130" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="canonical" href="https://pokedex-ai.netlify.app/index.html">
     <style>
         @import url("css/style.css");
     </style>
-    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <link rel="canonical" href="https://pokedex-ai.netlify.app/index.html">   
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
 </head>
 
@@ -88,6 +88,7 @@
                 };
 
                 reader.readAsDataURL(input.files[0]);
+                document.querySelector(".screen").style.background = "transparent";
                 window.setTimeout(predict, 100);
             } else {
                 removeUpload();
@@ -140,7 +141,6 @@
             var image = document.querySelector(".file-upload-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a,b)=>parseFloat(b.probability)-parseFloat(a.probability))
-            console.log(prediction);
             for (let i = 0; i < 3; i++) {
                 //init();
                 progress_list[i].querySelector(".progress-label").innerText = "";
@@ -158,6 +158,7 @@
                     //progress_list[i].innerHTML = classPrediction;
                 }
             }
+            console.log(prediction);
         }
     </script>
     <script type="text/javascript">
