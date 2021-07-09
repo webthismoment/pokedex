@@ -132,4 +132,5 @@ body {
     .section-ads{
         max-width:400px;
         max-height:200px;
+        margin: auto;
     }
